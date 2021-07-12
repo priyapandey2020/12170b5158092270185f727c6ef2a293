@@ -15,15 +15,6 @@ function setup() {
 
   foodObj = new Food();
 
-  // foodStock=database.ref('');
-  // foodStock.on("value",readStock);
-
-  // foodStock=database.ref('Food');
-  // foodStock.on(readStock);
-
-  // foodStock=database.ref('Food');
-  // foodStock("value",readStock);
-
   foodStock=database.ref('Food');
   foodStock.on("value",readStock);
   
@@ -35,22 +26,10 @@ function setup() {
   feed.position(700,95);
   feed.mousePressed(feedDog);
 
-
-  // addFood=createButton("Add Food");
-  // addFood.position(800,95);
-  // addFood.Pressed(addFoods);
-
-  //  addFood.createButton("Add Food");
-  // addFood.position(800,95);
-  // addFood.mousePressed(addFoods);
-
-   addFood=createButton("Add Food");
+  addFood=createButton("Add Food");
   addFood.position(800,95);
   addFood.mousePressed(addFoods);
 
-   // addFood=Button("Add Food");
-  // addFood.position(800,95);
-  // addFood.mousePressed(addFoods);
 
 }
 
@@ -103,14 +82,6 @@ function feedDog(){
 }
 
 
-//function to add food in stock
-// function addFoods(){
-//   foodS--;
-//   database.ref('/').update({
-//     Food:foodS
-//   })
-// }
-
 function addFoods(){
   foodS++;
   database.ref('/').update({
@@ -118,16 +89,3 @@ function addFoods(){
   })
 }
 
-// function addFoods(){
-//   foodS++;
-//   database.ref().update({
-//     Food:foodS
-//   })
-// }
-
-// function addFoods(){
-//   foodS++;
-//   database.ref('/').({
-//     Food:foodS
-//   })
-// }
